@@ -1,0 +1,17 @@
+/* Link */
+.link {
+   font-size: medium; 
+}
+.link:hover{
+    color: green;
+
+}
+.link:link{
+    color: aqua;
+}
+.link:active{
+    color: red;
+}
+.link:visited{
+    background: black;
+}
