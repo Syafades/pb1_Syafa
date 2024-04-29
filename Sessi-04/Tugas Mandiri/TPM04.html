@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung Luas dan Keliling Lingkaran</title>
+    <script>
+        function hitungLuasDanKeliling() {
+            // Nilai jari-jari lingkaran
+            var r = 7; // Anda bisa mengubah nilai ini sesuai kebutuhan
+
+            // Menghitung luas dan keliling lingkaran
+            var luas = Math.PI * Math.pow(r, 2);
+            var keliling = 2 * Math.PI * r;
+
+            // Menampilkan hasil menggunakan console.log()
+            console.log("Luas lingkaran:", luas);
+            console.log("Keliling lingkaran:", keliling);
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Hitung Luas dan Keliling Lingkaran</h2>
+    <button onclick="hitungLuasDanKeliling()">Hitung</button>
+</body>
+
+</html>
