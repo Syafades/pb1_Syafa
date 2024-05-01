@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animasi Warna Tulisan</title>
+    <style>
+        #text {
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p id="text">Tulisan ini akan berubah warna secara terus-menerus.</p>
+    <p id="text">Tulisan ini akan berubah warna secara terus-menerus.</p>
+    <p id="text">Tulisan ini akan berubah warna secara terus-menerus.</p>
+
+    <script>
+        // Ambil elemen teks
+        let isi = document.getElementById('text');
+        // let text = "Tulisan ini akan berubah warna secara terus-menerus.";
+        // Array warna yang akan digunakan
+        let colors = ['red', 'green', 'blue', 'yellow'];
+        let index = 0; // Index warna saat ini
+        // function ulangkata() {
+        //     isi.textContent += text[index];
+        //     index = (index + 1) % text.length;
+        // }
+        // Fungsi untuk mengubah warna tulisan
+        function changeColor() {
+            text.style.color = colors[index];
+            index = (index + 1) % colors.length; // Loop ke warna pertama setelah mencapai warna terakhir
+        }
+
+        // Animasi perubahan warna
+        var intervalId = setInterval(function () {
+            // ulangkata();
+            changeColor();
+            // Set timeout untuk mereset warna setelah 500ms
+            setTimeout(function () {
+                text.style.color = ''; // Kembalikan ke warna default
+            }, 500);
+        }, 1000); // Ubah warna setiap 1 detik
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+materi tugas (resolved) sesi 5:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Loop For</title>
+</head>
+
+<body>
+    <h3>Belajar Loop For</h3>
+    <div id="makan"></div>
+    <label for="makanan">Makanan Anda:</label>
+    <br />
+    <input type="text" id="makanan" placeholder="input makanan kesukaan anda" />
+    <br />
+    <br />
+    <label for="nama">Nama Anda:</label>
+    <br />
+    <input type="text" id="nama" placeholder="input nama anda" />
+    <br />
+    <br />
+    <label for="total_loop">Total Loop:</label>
+    <br />
+    <input type="number" id="total" placeholder="input total loop" />
+    <br />
+    <br />
+
+    <!-- button click -->
+    <button onclick="print()">Print Makanan Kesukaan</button>
+    <!-- list -->
+    <ul id="list"></ul>
+
+    <script>
+        let nomor = 0;
+        console.log("nomor anda: " + nomor);
+        nomor = 5;
+        let hitung = 0;
+        for (let index = 0; index < nomor; index++) {
+            console.log("nomor saat ini (loop): " + index);
+            document.getElementById("makan").innerHTML += nomor;
+            hitung += index;
+        }
+
+        //   check type
+        console.log(typeof index);
+        console.log("nomor saat ini: " + hitung);
+
+        //   fungsi print
+        function print() {
+            let makanan = document.getElementById("makanan");
+            let dt = document.getElementById("list");
+            let nama = document.getElementById("nama");
+            let hasil = "";
+            console.log("nama anda : " + nama.value + "\n\nnegara : indonesia");
+
+            // looping masih berdasarkan banyaknya data array (total 3 "index 0,1,2")
+            let list_makanan = ["nasi goreng", "mie goreng", "ayam bakar"];
+            // method 1 (forEach)
+
+            list_makanan.forEach((element) => {
+                nomor++;
+                console.log(element);
+                hasil += `No. ${nomor} Nama Anda : ${nama.value} - Makanan Anda : ${makanan.value}`;
+                hasil += "<br>";
+                dt.innerHTML = hasil;
+            });
+            // method 2 (for)
+            // method 3 (while)
+            // method 4 (do while)
+        }
+    </script>
+</body>
+
+</html>
